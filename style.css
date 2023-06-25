@@ -1,0 +1,126 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+    --orange: hsl(25, 97%, 53%);
+    --cardBelow: #171e28;
+    --cardUpper: #232931;
+}
+
+html,
+body {
+    background-color: var(--veryDarkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.card {
+    background-image: radial-gradient(at top, var(--cardUpper), var(--cardBelow));
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.circle-container {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--darkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+h1,
+p {
+    font-family: 'Overpass', sans-serif;
+    color: var(--white);
+}
+
+h1 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--mediumGrey);
+}
+
+.flex-container {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: var(--lightGrey);
+}
+
+.circle-container:hover {
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--white);
+    transition: 200ms;
+}
+
+button {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 2px;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--orange);
+    transition: 300ms;
+}
+
+img {
+    width: 20px;
+}
+
+.answer-card {
+    display: none;
+    background-image: radial-gradient(at top, var(--cardUpper), var(--cardBelow));
+    padding: 50px 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.answer-card img {
+    width: 175px;
+}
+
+.answer {
+    font-family: 'Overpass', sans-serif;
+    color: var(--orange);
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 20px 65px;
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.rating.selected {
+    background-color: hsl(216, 12%, 54%);
+    color: white;
+}
